@@ -55,7 +55,7 @@ app.post("/tasks", (req, res) => {
 
 app.put("/tasks/:id", (req, res) => {
   const taskId = req.params.id;
-  const { title, description, completed } = req.body;
+  const { title, description, completed, priority } = req.body;
 
   const taskIndex = tasks.findIndex((t) => t.id === taskId);
 
